@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>ICELAND API</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="./dist/css/styles.css">
 </head>
 <body>
-	<div id="app-container"><h1></h1>
-		<div class="Header-container">
-			<div class="Navbar">
-				<span><p>home</p></span>
-				<span><p>concerts</p></span>
-				<span><p>Carpools</p><span>
-				<span><p>Flights</p></span>
-			</div>
-		</div>
-		<div class="home">
-<p>this sucks</p>
-		</div>
 
-		<div class="concerts">
-
-		</div>
-		<div class="carpools">
-
-		</div>
-		<div class="flights">
-
-		</div>
+<div class="top-nav-container">
+		<h1 class ="title">
+			<h1>FACTS ABOUT ICELAND</h1>
+		</h1>
+	<div class="tabcontent__list column container">
+			<span class="tabcontent__tab active" data-route="home">Home</span>
+			<span class="tabcontent__tab" data-route="concerts">Concerts</span>
+			<span class="tabcontent__tab" data-route="rides">Carpools</span>
+			<span class="tabcontent__tab" data-route="flights">Flights</span>
 	</div>
+</div>
+
+<div id="app-container">
+   <div class="fact-container">
+		<div class="pageContent">
+			<!--this is where dynamic info will go!-->
+	   </div>
+	</div>
+</div>
 	<script type="text/javascript" src="./dist/js/app.js"></script>
 </body>
 </html>
