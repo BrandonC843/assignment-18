@@ -112,22 +112,23 @@ function createCarpoolPageTemplate(dataArray){
 
 function controllerRouter(){
    var currentRoute = window.location.hash.slice(1);
-   console.log(currentRoute);
+   // console.log(currentRoute);
 
    if(currentRoute === 'home'){
-      console.log(currentRoute, 'iff');
+      // console.log(currentRoute, 'iff');
       createHomePageTemplate();
    }
 
 	if (currentRoute === 'concerts'){
-      // console.log('concert Route')
-      $.getJSON('http://apis.is/concerts').then(function(serverRes){
+      $.getJSON('https://apis.is/concerts').then(function(serverRes){
 		      createConcertsPageTemplate(serverRes.results)
+            console.log(serverRes.results);
+
 	   })
    }
 
    if (currentRoute === 'rides'){
-      $.getJSON('http://apis.is/rides/samferda-drivers/').then(function(serverRes){
+      $.getJSON('https://apis.is/rides/samferda-drivers/').then(function(serverRes){
          createCarpoolPageTemplate(serverRes.results)
 
 
@@ -136,8 +137,8 @@ function controllerRouter(){
    if(currentRoute === 'flights'){
 
 
-      var arrivals = $.getJSON('http://apis.is/flight?language=en&type=arrivals').then((arrivalRes)=>{
-         var departures = $.getJSON('http://apis.is/flight?language=en&type=departures').then((departRes)=>{
+      var arrivals = $.getJSON('https://apis.is/flight?language=en&type=arrivals').then((arrivalRes)=>{
+         var departures = $.getJSON('https://apis.is/flight?language=en&type=departures').then((departRes)=>{
             console.log(departRes.results, arrivalRes.results)
             var arrivalStr = createArrivalsPageTemplate(arrivalRes.results)
             var deptStr = createDeparturesPageTemplate(departRes.results)
